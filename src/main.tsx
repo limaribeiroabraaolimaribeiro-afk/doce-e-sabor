@@ -206,7 +206,6 @@ function App() {
       </section>}
     </main>
 
-    <footer><a className="marca" href="#inicio"><ChefHat size={21}/><span>Doce <i>&amp;</i> Sabor <em>da Roh</em></span></a><a href={whatsapp}>(42) 99905-9158</a></footer>
     {itens > 0 && !painel && <button className="button primary carrinho-flutuante" onClick={() => setPainel('carrinho')}><ShoppingBag size={19}/> Carrinho ({itens}) <strong>{moeda(total)}</strong></button>}
     {!painel && <div className="feedback" role="status">{feedback && <span>{feedback}</span>}</div>}
     {painel && <Drawer titulo={{ menu: 'Menu', pesquisa: 'Pesquisar produtos', carrinho: 'Seu carrinho', checkout: 'Finalizar pedido' }[painel]} fechar={() => setPainel(undefined)}>

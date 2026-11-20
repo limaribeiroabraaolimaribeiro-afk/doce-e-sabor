@@ -2,7 +2,7 @@ export const whatsapp = 'https://wa.me/5542999059158'
 export const molhos = ['Branco', 'Vermelho'] as const
 export type Molho = typeof molhos[number]
 export type Grupo = 'panquecas' | 'pasteis' | 'assados'
-export const foto = (name: string) => '/fotos/' + name + '.webp'
+export const foto = (name: string) => import.meta.env.BASE_URL + 'fotos/' + name + '.webp'
 export const moeda = (centavos: number) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(centavos / 100)
 
 export interface Produto {
